@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <style>
+        .screen {
+            position: relative;
+            width: 1200px;
+            height: 500px;
+            border: 1px solid white;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        input {
+            border-radius: 5px;
+            display: block;
+            width: 300px;
+            height: 30px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .btn {
+            width: 20%;
+            height: 50px;
+            line-height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        button {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="screen"></div>
+        <input type="text"><br>
+    <div class="btn">
+        <button class="shoot">发射</button>
+        <button class="clear">清屏</button>
+        <p>设置透明度:</p>
+        <button id="0">恢复透明度</button>
+     
+        <button id="1">75%透明度</button>
+      
+    </div>
+    <script>
+        $(function(){
+            var op = 1;
+            $('.shoot').click(function(){
+                var txt = $('input').val();
+                var span = $('<span></span>')
+                var fontsize = parseInt(Math.random() * 40) + 20;
+                var top = parseInt(Math.random() * 400) - 20;
+                var colorR = parseInt(Math.random() * 256)
+                var colorG = parseInt(Math.random() * 256)
+                var colorB = parseInt(Math.random() * 256)
+                var color = "rgb(" + colorR + "," + colorG + "," + colorB + ")";
+
+                top = top < 20 ? 30 : top;
+                top = top + 'px';
+
+                var speed = Math.random() * 20000;
+                speed = speed < 3000 ? 5000 : speed;
+                span.attr('speed',speed);
+                span.html(txt);
+
+                
+                fontsize = fontsize + 'px';
+                span.css('position','absolute').css('top',top).css('right','0').css('color',color).css('font-size',fontsize).css('opacity',op);
+                $('.screen').append(span);
+                $('.screen').children().animate({
+                    right:'100%'
+                },speed,function(){ 
+                    $(this).remove();
+                })
+            })
+
+            $('.clear').click(function(){
+                $('.screen').empty();
+            })
+
+            $('input').keyup(function(e){
+                if(e.keyCode == 13){
+                    $('.shoot').click();
+                }                
+            })
+            $('#0').click(function(){
+                $('span').css('opacity',1);
+                op = 1;
+            })
+         
+            $('#1').click(function(){
+                $('span').css('opacity',0.25);
+                op = 0.25;
+            })
+          
+        })
+    </script>
+</body>
+</html>
