@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Document</title>
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/3.css">
+    <style>
+        #header {
+            background-color: rgb(242, 242, 242);
+            display: flex;
+            align-items: center;
+            height: 60px;
+            justify-content: space-around;
+        }
+
+        .container {
+            font-size: 20px;
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .footer {
+            background-color: skyblue;
+        }
+
+        .contact {
+            padding-top: 40px;
+            width: 80%;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .between {
+            justify-content: space-between;
+        }
+
+        .nav {
+            list-style: none;
+        }
+
+        .nav li {
+            float: right;
+            margin-left: 5px;
+        }
+
+        .container {
+            font-size: 20px;
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .con {
+            flex: 1;
+            text-align: center;
+        }
+
+        .con img {
+            margin-bottom: 15px;
+        }
+
+        .s {
+            padding-top: 20px;
+        }
+
+        .l img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .bq {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            border-top: 1px solid rgb(189, 187, 187);
+            padding: 5px;
+        }
+
+        #allmap {
+            /* width: 50%; */
+            height: 350px;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+
+        .about {
+            text-align: center;
+            margin: 10px;
+         /*    height: 400px; */
+            margin-bottom: 5px;
+        }
+
+        .jieshao {
+           /*  width: 50%; */
+            float: right;
+            display: block;
+        }
+
+        .jieshao p {
+            text-align: left;
+            font-size: 20px;
+            padding-left: 20px;
+        }
+
+        .mm {
+            text-align: left;
+            font-size: 25px;
+            margin: 20px;
+        }
+
+        .mm img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .mm span {
+            padding-left: 20px;
+        }
+        .mapp{
+            width: 80%;
+            display: flex;
+            margin: 0 auto;
+        }
+    </style>
+    <script type="text/javascript"
+        src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=VC2zWKTi5jCnpIGXHqGwq4dEDPiHbBqy"></script>
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="navs navbars">
+            <div class="navbar-box container">
+                <div class="logo">
+                    <img id="img1" src="img/logo.png">
+                    <span>极客大叔的网站</span>
+                </div>
+                <div id='menus' class="menu">菜单</div>
+
+                <div id="lists" class="list1 list-mobile">
+                    <a href="index.html">首页</a>&nbsp;&nbsp;&nbsp;
+                    <a href="news.html">新闻</a>&nbsp;&nbsp;&nbsp;
+                    <a href="about.html">关于我们</a>&nbsp;&nbsp;&nbsp;
+                    <a href="/train/1.html">个人展示页</a>&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about container-fluid">
+        <h2>关于我们</h2>
+        <div class="mapp row">
+            <!--百度地图容器-->
+            <div style="height:350px;border:#ccc solid 1px;font-size:12px;" id="allmap" class="col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
+            <div class="jieshao col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <p>闽江学院（Minjiang University，MJU），简称“闽院”，坐落于福建省福州市，是由福建省人民政府举办的一所高等院校，入选双万计划、“服务国家特殊需求”硕士专业学位研究生教育试点高校、福建省重点建设高校、福建省一流学科建设高校、福建省深化创新创业教育改革示范高校。</p>
+                <div class="mm">
+                    <img src="/img/dizhi.jpg" alt=""> <span>福州市闽江学院创想电玩</span>
+                </div>
+                <div class="mm">
+                    <img src="/img/youxiang.jpg" alt=""> <span>1071944444@qq.com</span>
+                </div>
+                <div class="mm">
+                    <img src="/img/dianhua.jpg" alt=""> <span>137-999-74887</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="footer">
+        <ul class="row" style="padding: 20px;">
+            <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img src="/img/dizhi.jpg" alt="" width="200px">
+                <p>福州市闽江学院创想电玩</p>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img src="/img/youxiang.jpg" alt="" width="200px">
+                <p>1071944444@qq.com</p>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img src="/img/dianhua.jpg" alt="" width="200px">
+                <p>137-999-74887</p>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img src="/img/9.jpg" alt="" width="200px">
+                <p>扫一扫</p>
+            </li>
+        </ul>
+        <p class="bq">
+            Copyright © 创想电玩
+        </p>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMapGL.Map("allmap");
+    var point = new BMapGL.Point(119.176895, 26.072713);
+    map.centerAndZoom(point, 15);
+
+    var marker = new BMapGL.Marker(point);  // 创建标注
+    map.addOverlay(marker);              // 将标注添加到地图中
+    var opts = {
+        width: 200,     // 信息窗口宽度
+        height: 100,     // 信息窗口高度
+        title: "闽江学院", // 信息窗口标题
+        message: "这里是闽江学院"
+    }
+    var infoWindow = new BMapGL.InfoWindow("地址：福州市大学城闽江学院", opts);  // 创建信息窗口对象 
+    marker.addEventListener("click", function () {
+        map.openInfoWindow(infoWindow, point); //开启信息窗口
+    });
+</script>
+<script>
+    $(function () {
+        $('#lists').removeClass('list-mobile')
+        $('#menus').click(function () {
+            if ($('#lists').hasClass('list-mobile')) {
+                $('#lists').removeClass('list-mobile')
+            } else {
+                $('#lists').addClass('list-mobile')
+            }
+        })
+    })
+</script>
