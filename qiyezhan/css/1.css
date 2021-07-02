@@ -14,7 +14,7 @@
 }
 
 .footer {
-    background-color: skyblue;
+    background-color: rgb(7, 57, 77);
 }
 
 .contact {
@@ -358,7 +358,7 @@ a:hover {
 .footer {
     margin-top: 50px;
     width: 100%;
-    background-color: skyblue;
+    background-color: rgb(7, 57, 77);
     color: #fff;
 }
 

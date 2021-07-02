@@ -30,7 +30,7 @@
         }
 
         .footer {
-            background-color: skyblue;
+            background-color: rgb(7, 57, 77);
         }
 
         .contact {
@@ -154,7 +154,7 @@
               $('.list').empty();
               for(let i=0;i<res.data.data.list.length;i++){
                   let li = $("<li></li>");
-                  li.append(`<img src="${res.data.data.list[i].img}" alt="" style="width: 400px;height: 300px;">`);
+                  li.append(`<img src="${res.data.data.list[i].img}" alt="" style="width: 350px;height: 250px;">`);
                   li.append(`<p style="font-weight: bold;">${res.data.data.list[i].title}</p>`);
                   li.append(`<p style="color:darkgrey; font-size: 10px; margin: auto;">${res.data.data.list[i].time}</p>`);
                   /* li.append(`<p style="font-size: 13px;">${res.data.data.list[i].content}</p>`); */
@@ -202,7 +202,7 @@
             </li>
             <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <img src="/img/9.jpg" alt="" width="200px">
-                <p>扫一扫</p>
+                <p>扫一扫，了解创想电玩</p>
             </li>
         </ul>
         <p class="bq">

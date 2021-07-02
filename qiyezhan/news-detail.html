@@ -12,6 +12,8 @@
         crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/lazysizes/5.3.2/lazysizes-umd.js"></script>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="css/3.css">
     <script>
@@ -43,7 +45,7 @@
         }
 
         .footer {
-            background-color: skyblue;
+            background-color: rgb(7, 57, 77);
         }
 
         .contact {
@@ -133,22 +135,22 @@
 
     </div>
     <script>
-        /* alert(window.location.search.split('=')[1]); */
         var idx = window.location.search.split('=')[1];
-        /* axios.get(`https://www.fastmock.site/mock/9ebe3a368a27679abbcec28818a46c73/api/api/${window.location.search.split('=')[1]}`).then(function(res) { */
-            axios.get(`https://www.fastmock.site/mock/8afeb38740bd9c6c8ecb454b11a2d48c/train/train`).then(function (res) {
 
+        axios.get(`https://www.fastmock.site/mock/8afeb38740bd9c6c8ecb454b11a2d48c/train/train1?id=${idx}`).then(function(res) {
             console.log(res.data);
             /*  let title = $(`<h1>${res.data.name}</h1>`);
              $('#div').append(title); */
+
             var main = $('#main');
-            let title = $(`<h1>${res.data.data.news[idx].title}</h1>`);
+            let title = $(`<h1>${res.data.data.list[0].title}</h1>`);
             main.append(title);
-            main.append(`<p style="color:darkgrey; font-size: 10px; margin: auto;">${res.data.data.news[idx].time}</p>`);
-            main.append(`<img src="${res.data.data.news[idx].img}" alt="" style ='width:80%'>`);
-            main.append(`<p style="font-size: 15px;">${res.data.data.news[idx].content}</p>`);
+            main.append(`<p style="color:red; font-size: 20px; margin: auto;">${res.data.data.list[0].time}</p>`);
+            main.append(`<img data-src="${res.data.data.list[0].img}" class="lazyload" style="height:30% ; width:60%;" alt="">`);
+            main.append(`<p style="font-size: 28px; text-align:left">${res.data.data.list[0].mainContent}</p>`);
         })
     </script>
+
 
 
 
@@ -169,7 +171,7 @@
         </li>
         <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <img src="/img/9.jpg" alt="" width="200px">
-            <p>扫一扫</p>
+            <p>扫一扫，了解创想电玩</p>
         </li>
     </ul>
     <p class="bq">
