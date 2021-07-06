@@ -115,7 +115,7 @@
             width: 50%;
             margin: 0 auto;
             text-align: center;
-            border-top: 1px solid rgb(189, 187, 187);
+            border-top: 1px solid rgb(189, 189, 187);
             padding: 5px;
         }
     </style>
@@ -203,7 +203,7 @@
               $('.list').empty();
               for(let i=0;i<res.data.data.list.length;i++){
                   let li = $("<li></li>");
-                  li.append(`<img src="${res.data.data.list[i].img}" alt="" style="width: 350px;height: 250px;">`);
+                  li.append(`<img src="${res.data.data.list[i].img}" alt="" style="width: 200px;height: 150px;">`);
                   li.append(`<p style="font-weight: bold;">${res.data.data.list[i].title}</p>`);
                   li.append(`<p style="color:darkgrey; font-size: 10px; margin: auto;">${res.data.data.list[i].time}</p>`);
                   /* li.append(`<p style="font-size: 13px;">${res.data.data.list[i].content}</p>`); */
@@ -239,20 +239,20 @@
     <div class="footer">
         <ul class="row" style="padding: 20px;">
             <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <img data-src="img/dizhi.jpg" class="lazyload" alt="" width="200px">
+                <img data-src="img/dizhi.jpg" class="lazyload" alt="" width="80px">
                 <p>福州市闽江学院创想电玩</p>
             </li>
             <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <img id="footerImg" data-src="img/youxiang.jpg" class="lazyload" alt="" width="200px">
+                <img id="footerImg" data-src="img/youxiang.jpg" class="lazyload" alt="" width="80px">
                 <p>1071944444@qq.com</p>
                 <p>通过email联系我们</p>
             </li>
             <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <img data-src="img/dianhua.jpg" class="lazyload" alt="" width="200px">
+                <img data-src="img/dianhua.jpg" class="lazyload" alt="" width="80px">
                 <p>137-999-74887</p>
             </li>
             <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <img data-src="img/9.jpg"  class="lazyload" alt="" width="200px">
+                <img data-src="img/9.jpg"  class="lazyload" alt="" width="80px">
                 <p>扫一扫，了解创想电玩</p>
             </li>
         </ul>

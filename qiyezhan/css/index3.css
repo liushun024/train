@@ -57,7 +57,7 @@
 .tro img{
     display: block;
     float: left;
-    height: 450px;
+    height: auto;
     border-radius: 15px;
 }
 .tro .txt{
